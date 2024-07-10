@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: #fff;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.buscar {
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    outline: none;
+}
+
+.botaobusca {
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: #17a2b8;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    background-color: #343a40;
+    padding: 10px;
+}
+
+.botao1 {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+.main-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.botao2 {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.botao2 i {
+    margin-right: 10px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #333;
+    margin: 20px 0;
+}
+
+h1 {
+    text-align: center;
+    color: #343a40;
+}
+
+.exposicao-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.exposicao {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    border: solid 1px #343a40;
+    width: 300px;
+    height: 300px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons i {
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.h1pg2{
+    text-align: center;
+    justify-content: center;
+    height: 320px;
+    display: flex;
+    padding: 20px;
+}
+.pag2{
+    height: 150px;
+}
