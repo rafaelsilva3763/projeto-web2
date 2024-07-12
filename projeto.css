@@ -65,7 +65,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    
 }
 
 .main-buttons {
@@ -108,6 +107,7 @@ h1 {
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
+    
 }
 
 .exposicao {
@@ -141,13 +141,50 @@ footer {
     cursor: pointer;
     font-size: 20px;
 }
-.h1pg2{
+.social-icons i:hover {
+    color: #007BFF;
+}
+
+/*Configuração da página QUEM SOMOS.*/
+
+.h2pg2{
     text-align: center;
     justify-content: center;
     height: 320px;
     display: flex;
-    padding: 20px;
-}
-.pag2{
+    padding: 30px;
     height: 150px;
+    margin: 15px;
+    border: solid 1px black;
+}
+
+/*Configuração da página AJUDA*/
+.pagajuda .ajuda-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px); /* Ajuste para header e footer */
+    padding: 20px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+.pagajuda .ajuda-lista {
+    list-style-type: none;
+    margin: 20px;
+}
+
+.pagajuda .ajuda-lista li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.pagajuda .contato {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.pagajuda .contato p {
+    margin: 10px 0;
 }
