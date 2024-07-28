@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-in de Compra</title>
+    <link rel="stylesheet" href="projeto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!--Cabeçalho com logo-->
+    <header>
+        <div class="header-container">
+            <div class="logo">LOGO</div>
+        </div>
+    </header>
+
+    <!--Formulário de Check-in-->
+    <main>
+        <div class="checkin-container">
+            <h1>Check-in de Compra</h1>
+            <form class="checkin-form">
+                <div class="input-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="input-group">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" id="sobrenome" name="sobrenome" required>
+                </div>
+                <div class="input-group">
+                    <label for="numero-cartao">Número do Cartão</label>
+                    <div class="card-input">
+                        <input type="text" id="numero-cartao" name="numero-cartao" required>
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="vencimento">Vencimento do Cartão</label>
+                    <input type="month" id="vencimento" name="vencimento" required>
+                </div>
+                <div class="input-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+                <div class="input-group">
+                    <label for="parcelas">Número de Parcelas</label>
+                    <input type="number" id="parcelas" name="parcelas" min="1" max="12" required>
+                </div>
+                <button type="submit" class="checkin-btn">Confirmar Check-in</button>
+            </form>
+        </div>
+    </main>
+
+    <!--Rodapé-->
+    <footer>
+        <p>LOGO</p>
+        <p>&copy; Coworking@2024</p>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+    </footer>
+</body>
+</html>
