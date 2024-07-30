@@ -1,74 +1,80 @@
-// index.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { ChakraProvider } from '@chakra-ui/react';
-import App from './App';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-// App.js
-import React from 'react';
-import {
-  Box,
-  Button,
-  Container,
-  FormControl,
-  FormLabel,
-  Heading,
-  Input,
-  VStack,
-  Text,
-  useColorMode,
-  useColorModeValue
-} from '@chakra-ui/react';
-
-function App() {
-  const { toggleColorMode } = useColorMode();
-  const formBackground = useColorModeValue("gray.100", "gray.700");
-
-  return (
-    <Container centerContent>
-      <Button onClick={toggleColorMode} mb={4}>
-        Toggle Color Mode
-      </Button>
-      <Box
-        p={8}
-        maxWidth="400px"
-        borderWidth={1}
-        borderRadius={8}
-        boxShadow="lg"
-        bg={formBackground}
-      >
-        <VStack spacing={4}>
-          <Heading as="h1" size="lg">
-            Login
-          </Heading>
-          <FormControl id="email">
-            <FormLabel>Email</FormLabel>
-            <Input type="email" placeholder="Enter your email" />
-          </FormControl>
-          <FormControl id="password">
-            <FormLabel>Password</FormLabel>
-            <Input type="password" placeholder="Enter your password" />
-          </FormControl>
-          <Button colorScheme="teal" width="full">
-            Login
-          </Button>
-          <Text fontSize="sm">
-            Don't have an account? <Button variant="link" colorScheme="teal">Sign Up</Button>
-          </Text>
-        </VStack>
-      </Box>
-    </Container>
-  );
+/* Botão de reserva */
+// Função para redirecionar para a página de login
+function redirecionarParaLogin() {
+  window.location.href = "paglogin.html";
 }
 
-export default App;
+// Adiciona o evento de clique aos botões de reserva quando a página for carregada
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.butaoreserv').forEach(button => {
+      button.addEventListener('click', redirecionarParaLogin);
+  });
+});
 
 
+// Função para redirecionar para a página de login
+function redirecionarParaLogin() {
+  window.location.href = 'paglogin.html';
+}
+
+// Adiciona o evento de clique ao botão de cadastro quando a página for carregada
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('signupBtn').addEventListener('click', redirecionarParaLogin);
+});
+
+// Função para redirecionar para a página de reserva
+function redirecionarParaReserva() {
+  window.location.href = 'pagreserva.html';
+}
+
+// Adiciona o evento de clique ao botão de login quando a página for carregada
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('loginBtn').addEventListener('click', redirecionarParaReserva);
+});
+
+// Função para redirecionar para a página de check-in
+function redirecionarParaCheckin() {
+  window.location.href = 'checkin.html';
+}
+
+// Adiciona o evento de clique ao botão de confirmar reserva quando a página for carregada
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('confirmarReservaBtn').addEventListener('click', redirecionarParaCheckin);
+});
+// Função para validar o formulário de cadastro
+function validateSignupForm() {
+  var username = document.getElementById('username').value;
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+
+  // Verificar se todos os campos foram preenchidos
+  if (username === "" || email === "" || password === "") {
+      alert("Todos os campos devem ser preenchidos.");
+      return false;
+  }
+
+  // Verificar a validade do e-mail
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+      alert("Digite um e-mail válido.");
+      return false;
+  }
+
+  // Verificar a força da senha (opcional)
+  if (password.length < 6) {
+      alert("A senha deve ter pelo menos 6 caracteres.");
+      return false;
+  }
+
+  // Se todas as validações passarem
+  return true;
+}
+
+// Adicionar o evento de clique no botão de cadastro
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('signupBtn').addEventListener('click', function() {
+      if (validateSignupForm()) {
+          window.location.href = 'paglogin.html'; // Redirecionar se a validação passar
+      }
+  });
+});

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto</title>
+    <script src="projeto.js" defer></script>
     <link rel="stylesheet" href="projeto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -17,9 +18,8 @@
                 <a href="projeto.html" class="icon-button">
                     <i class="fa-solid fa-house"></i>
                 </a>
-                <a href="paglogin.html"><button class="icon-button"><i class="fas fa-user"></i>
-                </button></a>
-                <div class="ligar">Precisa de ajuda para reservar?<br>Ligue: +55 81 4445-2565</div>
+                <a href="paglogin.html"><button class="icon-button"><i class="fas fa-user"></i></button></a>
+                <div class="ligar">Precisa de ajuda para reservar ? Ligue: +55 81 4445-2565</div>
             </div>
         </div>
         <h1><div class="reserva">Reserva Online</div></h1>
@@ -33,13 +33,13 @@
     <!--Formulário de reserva-->
     <main>
         <div class="reserva-container">
-            <form class="reserva-form">
+            <form class="reserva-form" id="reservaForm">
                 <div class="input-group">
                     <label for="sala">Salas de Reunião</label>
                     <select id="sala" name="sala">
-                        <option value="sala1">Sala 1</option>
-                        <option value="sala2">Sala 2</option>
-                        <option value="sala3">Sala 3</option>
+                        <option value="sala1">Sala de reunião</option>
+                        <option value="sala2">Sala de escritório </option>
+                        <option value="sala3">Sala de trabalho coletivo</option>
                     </select>
                 </div>
                 <div class="input-group">
@@ -62,7 +62,7 @@
                     <label for="localizacao">Localização</label>
                     <input type="text" id="localizacao" name="localizacao" required>
                 </div>
-                <button type="submit" class="reserva-btn">Confirmar Reserva</button>
+                <button type="button" class="reserva-btn" id="confirmarReservaBtn">Confirmar Reserva</button>
             </form>
         </div>
     </main>
