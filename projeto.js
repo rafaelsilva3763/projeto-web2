@@ -78,3 +78,26 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
+// Função para armazenar o valor total no localStorage e redirecionar para a página de check-in
+function reservar(valor) {
+  localStorage.setItem('valorTotal', valor);
+  window.location.href = 'checkin.html';
+}
+function setValorTotal(valor) {
+  localStorage.setItem('valorTotal', 'R$ ' + valor + ',00');
+  window.location.href = 'checkin.html';
+}
+
+        // Função para exibir o valor total armazenado no localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const valorTotal = localStorage.getItem('valorTotal');
+            if (valorTotal) {
+                document.getElementById('valor-total').innerText = 'VALOR TOTAL = ' + valorTotal;
+            }
+        });
+
+        // Função para redirecionar ao submeter o formulário
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+            window.location.href = 'final.html'; // Redireciona para final.html
+        }

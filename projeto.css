@@ -172,7 +172,7 @@ footer {
    border: 1px black;
    justify-content: center;
    text-align: center;
-   min-height: calc(100vh - 400px)
+   min-height: calc(120vh - 400px)
   
 }
 

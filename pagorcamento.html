@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto</title>
-    <script src="projeto.js"></script>
+    <script src="projeto.js" defer></script>
     <link rel="stylesheet" href="projeto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -38,17 +38,17 @@
         <div class="exposicao">
             <p><img src="imagens/coworking1.jpg" alt="img1"><b>Espaço de trabalho compartilhado</b></p>
             <p style="color: red;"><b>A partir de R$ 420,00 mensais</b></p>
-            <button class="butaoreserv">Reserve agora</button>
+            <button class="butaoreserv" onclick="setValorTotal(420)">Reserve agora</button>
         </div>
         <div class="exposicao">
             <p><img src="imagens/coworking3.jpg" alt="img3"><b>Aluguéis diários ou mensais. </b></p>
             <p style="color: red;"><b>A partir de R$ 640,00 mensais</b></p>
-<button class="butaoreserv">Reserve agora</button>
+            <button class="butaoreserv" onclick="setValorTotal(640)">Reserve agora</button>
         </div>
         <div class="exposicao">
             <p><img src="imagens/coworking2.jpg" alt="img2"><b>Espaço personalizado.</b></p>
             <p style="color: red;"><b>A partir de R$ 640,00 mensais ou diárias a partir de R$ 120,00</b></p>
-            <button class="butaoreserv">Reserve agora</button>
+            <button class="butaoreserv" onclick="setValorTotal(120)">Reserve agora</button>
         </div>
     </div>
 

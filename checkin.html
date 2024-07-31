@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check-in de Compra</title>
+    <script src="projeto.js"></script>
     <link rel="stylesheet" href="projeto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 </head>
 <body>
 
@@ -20,26 +22,25 @@
                 <a href="paglogin.html"><button class="icon-button">
                     <i class="fas fa-user"></i>
                 </button></a>
-            
+            </div>
         </div>
-        
     </header>
 
     <!--Formulário de Check-in-->
     <main>
         <div class="checkin-container">
             <h1>Check-in de Compra</h1>
-            <form class="checkin-form">
+            <form class="checkin-form" onsubmit="handleFormSubmit(event)">
                 <div class="input-group">
-                    <label for="nome">Nome</label>
+                    <label for="nome" style="padding-right: 10px;">Nome</label>
                     <input type="text" id="nome" name="nome" required>
                 </div>
                 <div class="input-group">
-                    <label for="sobrenome">Sobrenome</label>
+                    <label for="sobrenome" style="margin-right: 10px;">Sobrenome</label>
                     <input type="text" id="sobrenome" name="sobrenome" required>
                 </div>
                 <div class="input-group">
-                    <label for="numero-cartao">Número do Cartão</label>
+                    <label for="numero-cartao" style="padding-right: 10px;">Número do Cartão</label>
                     <div class="card-input">
                         <input type="text" id="numero-cartao" name="numero-cartao" required>
                         <i class="fab fa-cc-visa"></i>
@@ -47,16 +48,25 @@
                     </div>
                 </div>
                 <div class="input-group">
-                    <label for="vencimento">Vencimento do Cartão</label>
+                    <input type="radio" id="debito" name="tipo-cartao" value="debito" required>
+                    <label for="debito">Débito</label>
+                    <input type="radio" id="credito" name="tipo-cartao" value="credito" required>
+                    <label for="credito">Crédito</label>
+                </div>
+                <div class="input-group">
+                    <label for="vencimento" style="padding-right: 10px;">Vencimento do Cartão</label>
                     <input type="month" id="vencimento" name="vencimento" required>
                 </div>
                 <div class="input-group">
-                    <label for="cvv">CVV</label>
+                    <label for="cvv" style="padding-right: 10px;">CVV</label>
                     <input type="text" id="cvv" name="cvv" required>
                 </div>
                 <div class="input-group">
-                    <label for="parcelas">Número de Parcelas</label>
+                    <label for="parcelas" style="padding-right: 10px;">Número de Parcelas</label>
                     <input type="number" id="parcelas" name="parcelas" min="1" max="12" required>
+                </div>
+                <div class="input-group">
+                    <p id="valor-total" style="text-align: center; font-size: 20px; margin: auto;"></p> <!-- Div para exibir o valor total -->
                 </div>
                 <button type="submit" class="checkin-btn">Confirmar Check-in</button>
             </form>
@@ -76,3 +86,4 @@
     </footer>
 </body>
 </html>
+
